@@ -10,7 +10,7 @@
      
      define('POSTURL', 'https://login.facebook.com/login.php?login_attempt=1');
      
-     define('POSTVARS', 'charset_test=€,´,€,´,?,?,?&next=http://developers.facebook.com/docs/api&return_session=0&legacy_return=1&display=&session_key_only=0&trynum=1&lsd=Nj7E1&email='.$email.'&pass='.$password.'&persistent=0&login=Login');
+     define('POSTVARS', 'charset_test=ï¿½,ï¿½,ï¿½,ï¿½,?,?,?&next=http://developers.facebook.com/docs/api&return_session=0&legacy_return=1&display=&session_key_only=0&trynum=1&lsd=Nj7E1&email='.$email.'&pass='.$password.'&persistent=0&login=Login');
      
      $ch = curl_init(POSTURL);
      
