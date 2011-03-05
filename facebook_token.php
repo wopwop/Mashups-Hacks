@@ -3,10 +3,10 @@
      $auth_token="";
      
      // Facebook email
-     $email = "aniss@operancy.com";
+     $email = "";
      
      // Facebook password
-     $password = "102030";
+     $password = "";
      
      define('POSTURL', 'https://login.facebook.com/login.php?login_attempt=1');
      
