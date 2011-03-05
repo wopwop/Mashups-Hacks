@@ -3,14 +3,14 @@
      $auth_token="";
      
      // Facebook email
-     $email = "";
+     $email = "aniss@operancy.com";
      
      // Facebook password
-     $password = "";
+     $password = "102030";
      
      define('POSTURL', 'https://login.facebook.com/login.php?login_attempt=1');
      
-     define('POSTVARS', 'charset_test=€,´,€,´,?,?,?&next=http://developers.facebook.com/docs/api&return_session=0&legacy_return=1&display=&session_key_only=0&trynum=1&lsd=Nj7E1&email='.$email.'&pass='.$password.'&persistent=0&login=Login');
+     define('POSTVARS', 'next=http://developers.facebook.com/docs/api&return_session=0&legacy_return=1&email='.$email.'&pass='.$password.'&persistent=0&login=Login');
      
      $ch = curl_init(POSTURL);
      
@@ -18,7 +18,9 @@
      
      curl_setopt($ch, CURLOPT_SSL_VERIFYPEER , 0);
      
-     curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/5.0 (Windows; U; Windows NT 6.0; en-US; rv:1.8.1.16) Gecko/20080702 Firefox/2.0.0.16 Paros/3.2.13"); curl_setopt($ch, CURLOPT_COOKIEJAR , "facebookcookies"); curl_setopt($ch, CURLOPT_COOKIEFILE, "facebookcookies");
+     curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/5.0 (Windows; U; Windows NT 6.0; en-US; rv:1.8.1.16) Gecko/20080702 Firefox/2.0.0.16 Paros/3.2.13"); curl_setopt($ch, CURLOPT_COOKIEJAR , "facebookcookies");
+     
+     curl_setopt($ch, CURLOPT_COOKIEFILE, "facebookcookies");
      
      curl_setopt($ch, CURLOPT_POSTFIELDS ,POSTVARS);
      
@@ -46,7 +48,7 @@
         $url = $href->getAttribute('href');
         if(strpos($url, "access_token=")) {
             $url = explode("access_token=", $url);
-            $authToken = $url[1];
+            $auth_token = $url[1];
             break;
         }
         }
