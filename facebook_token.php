@@ -51,5 +51,3 @@
         }
         }
             echo $auth_token;        
-
-?>
